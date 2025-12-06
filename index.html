@@ -3,129 +3,209 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SaktiStore - Topup BBC & Jasa Akun MLBB Premium</title>
+    <title>⚡ Premium TopUp & Jasa Akun MLBB ⚡</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <h3 class="sidebar-title">MENU PREMIUM</h3>
-        <a href="#home" onclick="showPage('home'); closeNav();">🏠 Beranda</a>
-        <a href="#bantuan-admin" onclick="showPage('bantuan-admin'); closeNav();">💬 Bantuan Admin</a>
-        <a href="#tentang-website" onclick="showPage('tentang-website'); closeNav();">🌐 Tentang Kami</a>
-        <a href="#review" onclick="showPage('review'); closeNav();">⭐ Review Pelanggan</a>
-        <a href="#syarat-ketentuan" onclick="showPage('syarat-ketentuan'); closeNav();">📑 Syarat & Ketentuan</a>
-    </div>
-
-    <header class="navbar">
-        <div class="container">
-            <a href="#home" class="logo">SaktiStore.</a>
-            <span class="openbtn" onclick="openNav()"><i class="fas fa-bars"></i></span>
+    <header>
+        <div class="logo">
+            <span class="gradient-text">SAKTI STORE ML</span>
+        </div>
+        <nav class="desktop-nav">
+            <a href="#home">Beranda</a>
+            <a href="#" onclick="showPage('review')">Review</a>
+            <a href="#" onclick="showPage('help')">Bantuan Admin</a>
+            <a href="#" onclick="showPage('about')">Tentang Website</a>
+            <a href="#" onclick="showPage('terms')">Syarat & Ketentuan</a>
+        </nav>
+        <div class="menu-icon" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
         </div>
     </header>
 
-    <div class="main-content-wrapper active-page" id="home">
-        <main class="container">
-            
-            <section class="hero-slider">
-                <div class="slider-container">
-                    <div class="slide fade" style="background-image: url('https://via.placeholder.com/800x350/3b2c8c/FFFFFF?text=Event+AS+MLBB+1');">
-                        <div class="slide-text">
-                            <h3>🔥 New Hero Advance Server</h3>
-                            <p>Coba hero terbaru sebelum rilis di Original Server.</p>
-                        </div>
-                    </div>
-                    <div class="slide fade" style="background-image: url('https://via.placeholder.com/800x350/5042a8/FFFFFF?text=Event+AS+MLBB+2');">
-                        <div class="slide-text">
-                            <h3>💰 Borong BBC Sekarang!</h3>
-                            <p>Topup BBC termurah, proses kilat 10 detik!</p>
-                        </div>
-                    </div>
-                    <div class="slide fade" style="background-image: url('https://via.placeholder.com/800x350/6e5fbb/FFFFFF?text=Event+AS+MLBB+3');">
-                        <div class="slide-text">
-                            <h3>🚀 Akun Level 20 Instan</h3>
-                            <p>Langsung main rank di Advanced Server!</p>
-                        </div>
-                    </div>
-                    <div class="slide fade" style="background-image: url('https://via.placeholder.com/800x350/8a7cd0/FFFFFF?text=Event+AS+MLBB+4');">
-                        <div class="slide-text">
-                            <h3>⭐ Terpercaya Sejak 2024</h3>
-                            <p>Ribuan transaksi sukses telah kami layani.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="dots-container">
-                    </div>
-            </section>
-
-            <section id="kategori" class="category-selection">
-                <div class="category-card active" data-category="bbc">
-                    <img src="https://via.placeholder.com/70x70/ffd700/000000?text=BBC" alt="BBC Icon">
-                    <h4>Topup BBC</h4>
-                    <span class="badge populer">POPULER</span>
-                </div>
-                <div class="category-card" data-category="akun">
-                    <img src="https://via.placeholder.com/70x70/3b2c8c/ffffff?text=AKUN" alt="Akun Icon">
-                    <h4>Jasa Akun Advanced Server</h4>
-                    <span class="badge populer">FAVORIT</span>
-                </div>
-            </section>
-            
-            <section class="product-list" id="product-bbc">
-                <h2 class="section-title"><i class="fas fa-gem"></i> TOPUP BBC ADVANCE SERVER</h2>
-                <div class="card-grid">
-                    <div class="product-card" data-price="5000" data-item="Paket BOT 1.000 BBC" data-desc="Cocok buat bot harian, cepat naik level.">
-                        <div class="product-info"><h3>Paket BOT 1.000 BBC</h3></div>
-                        <div class="product-action"><span class="price">Rp 5.000</span><button class="buy-button" data-product="diamond">Beli Sekarang</button></div>
-                    </div>
-                    <div class="product-card" data-price="25000" data-item="Paket New User 5.000 BBC" data-desc="Pas buat nyoba event ringan di awal season.">
-                        <div class="product-info"><h3>Paket New User 5.000 BBC</h3><span class="badge populer">POPULER</span></div>
-                        <div class="product-action"><span class="price">Rp 25.000</span><button class="buy-button" data-product="diamond">Beli Sekarang</button></div>
-                    </div>
-                    <div class="product-card" data-price="50000" data-item="Paket Penguber Event 10.000 BBC" data-desc="Dijamin bisa kejar semua event yang ada!">
-                        <div class="product-info"><h3>Paket Penguber Event 10.000 BBC</h3></div>
-                        <div class="product-action"><span class="price">Rp 50.000</span><button class="buy-button" data-product="diamond">Beli Sekarang</button></div>
-                    </div>
-                    <div class="product-card" data-price="100000" data-item="Paket Anak Emak 20.000 BBC" data-desc="Pilihan favorit para sultan Advanced Server.">
-                        <div class="product-info"><h3>Paket Anak Emak 20.000 BBC</h3><span class="badge populer">BEST BUY</span></div>
-                        <div class="product-action"><span class="price">Rp 100.000</span><button class="buy-button" data-product="diamond">Beli Sekarang</button></div>
-                    </div>
-                    <div class="product-card" data-price="500000" data-item="Paket Anak Montoon 100.000 BBC" data-desc="Level sultan sejati, borong semua item langka.">
-                        <div class="product-info"><h3>Paket Anak Montoon 100.000 BBC</h3></div>
-                        <div class="product-action"><span class="price">Rp 500.000</span><button class="buy-button" data-product="diamond">Beli Sekarang</button></div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="product-list hidden" id="product-akun">
-                <h2 class="section-title"><i class="fas fa-user-plus"></i> JASA AKUN ADVANCE SERVER</h2>
-                <div class="card-grid">
-                    <div class="product-card" data-price="2000" data-item="Akun Level 1 Advanced Server" data-desc="Akun fresh baru. Cocok untuk Anda yang ingin mulai dari nol.">
-                        <div class="product-info"><h3>Akun Level 1</h3></div>
-                        <div class="product-action"><span class="price">Rp 2.000</span><button class="buy-button" data-product="akun">Beli Sekarang</button></div>
-                    </div>
-                    <div class="product-card" data-price="5000" data-item="Akun Level 3 Advanced Server" data-desc="Sudah melewati tutorial awal. Siap untuk event ringan.">
-                        <div class="product-info"><h3>Akun Level 3</h3><span class="badge populer">POPULER</span></div>
-                        <div class="product-action"><span class="price">Rp 5.000</span><button class="buy-button" data-product="akun">Beli Sekarang</button></div>
-                    </div>
-                    <div class="product-card" data-price="15000" data-item="Akun Level 20 Advanced Server" data-desc="Level maksimal, langsung bisa main rank tanpa batas level! ">
-                        <div class="product-info"><h3>Akun Level 20</h3><span class="badge populer">TOP TIER</span></div>
-                        <div class="product-action"><span class="price">Rp 15.000</span><button class="buy-button" data-product="akun">Beli Sekarang</button></div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
+    <div class="sidebar" id="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <a href="#home" onclick="toggleSidebar()">Beranda</a>
+        <a href="#" onclick="showPage('review'); toggleSidebar()">Review</a>
+        <a href="#" onclick="showPage('help'); toggleSidebar()">Bantuan Admin</a>
+        <a href="#" onclick="showPage('about'); toggleSidebar()">Tentang Website</a>
+        <a href="#" onclick="showPage('terms'); toggleSidebar()">Syarat & Ketentuan</a>
     </div>
-    
-    <div id="bantuan-admin" class="page-content hidden">
-        <div class="container">
-            <h2 class="page-title"><i class="fas fa-headset"></i> PUSAT BANTUAN</h2>
-            <p class="description">Kami siap membantu Anda! Hubungi kami melalui kontak resmi di bawah ini dan perhatikan jadwal respons admin.</p>
+
+    <main id="main-content">
+        <section id="home" class="page-section active">
             
-            <div class="admin-contact-grid">
-                <a href="#" id="wa-admin-link" target="_blank" class="contact-card whatsapp">
-                    <i class="fab fa-whatsapp"></i><h4>Chat Admin Yuk!</h4>
+            <div class="slider-container">
+                <div class="slider-track" id="slider-track">
+                    <div class="slide">
+                        <img src="https://i.ibb.co/C0W2h8Y/mlbb-event-1.jpg" alt="Event Terbaru 1">
+                        <div class="slide-caption">
+                            <h3>🔥 EVENT STUN KHUSUS</h3>
+                            <p>Dapatkan skin Chou, Brody, dan Selena STUN dengan mudah!</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ibb.co/3sWb42m/mlbb-event-2.jpg" alt="Event Terbaru 2">
+                        <div class="slide-caption">
+                            <h3>🌟 ADVANCED SERVER V.19</h3>
+                            <p>Coba hero baru Cici dan fitur terbaru MLBB sekarang juga!</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ibb.co/K2T3YjM/mlbb-event-3.jpg" alt="Event Terbaru 3">
+                        <div class="slide-caption">
+                            <h3>💎 SKIN KOFR GRATIS</h3>
+                            <p>Klaim skin KOF gratis dengan mengikuti event yang tersedia.</p>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <img src="https://i.ibb.co/rK5XJjG/mlbb-event-4.jpg" alt="Event Terbaru 4">
+                        <div class="slide-caption">
+                            <h3>🆕 HERO BARU NOVELLA</h3>
+                            <p>Hero support terbaru dengan skill yang unik, siap menjadi meta!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-tabs">
+                <button class="tab-btn active" onclick="changeCategory('bbc')">TOPUP BBC (Blind Box Coin)</button>
+                <button class="tab-btn" onclick="changeCategory('account')">JASA AKUN ADV SERVER ML</button>
+            </div>
+
+            <div class="product-list" id="product-list-container">
+                </div>
+        </section>
+
+        <section id="review" class="page-section hidden">
+            <h2 class="page-title">🌟 Review Pelanggan Sakti Store 🌟</h2>
+            <p class="subtitle">Lihat apa kata mereka yang sudah transaksi di sini!</p>
+            
+            <div class="review-box-container" id="review-list">
+                <div class="review-box new">
+                    <div class="review-header">
+                        <span class="review-name">**Anonim Pembeli**</span>
+                        <span class="review-date">Baru Saja</span>
+                    </div>
+                    <p class="review-text">BBC nya langsung masuk ga pake lama! Recomen bgt buat para penguber event, tancap gas!</p>
+                    <span class="review-tag">#TopUpBBC</span>
+                </div>
+            </div>
+
+            <button class="whatsapp-testi-btn" onclick="window.open('https://chat.whatsapp.com/testi-sakti-store-url', '_blank')">
+                <i class="fab fa-whatsapp"></i> Lihat Semua Testimoni (Channel WA)
+            </button>
+
+            <div class="review-form-container">
+                <h3>🗣️ Tambahkan Ulasanmu!</h3>
+                <div class="input-group">
+                    <input type="text" id="reviewer-name" placeholder="Nama / Nickname (Opsional)" required>
+                </div>
+                <div class="input-group">
+                    <textarea id="reviewer-comment" placeholder="Tuliskan pengalaman belanjamu..." rows="4" required></textarea>
+                </div>
+                <button class="submit-review-btn" onclick="submitReview()">Kirim Ulasan</button>
+            </div>
+        </section>
+
+        <section id="help" class="page-section hidden">
+            <h2 class="page-title">💬 Bantuan & Kontak Admin</h2>
+            <p class="subtitle">Kami siap membantu Anda. Jangan ragu hubungi kami melalui channel di bawah ini.</p>
+            
+            <div class="admin-help-info">
+                <p>Admin akan membalas pesan Anda secepat kilat (Fast Respon) di waktu-waktu berikut, kecuali ada antrean panjang.</p>
+                <div class="time-schedule">
+                    <div class="schedule-item fast-response">
+                        <h4>🔥 Fast Respon</h4>
+                        <p>09:00 - 12:00 WIB</p>
+                        <p>18:00 - 22:00 WIB</p>
+                    </div>
+                    <div class="schedule-item low-response">
+                        <h4>😴 Low Respon</h4>
+                        <p>12:00 - 18:00 WIB (Istirahat & Proses)</p>
+                        <p>22:00 - 09:00 WIB (Tidur)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-buttons">
+                <a href="https://wa.me/6281234567890?text=Halo%20Admin%20Sakti%20Store%2C%20saya%20mau%20order..." target="_blank" class="contact-btn whatsapp">
+                    <i class="fab fa-whatsapp"></i> Chat Admin Yuk (WhatsApp)
+                </a>
+                <a href="mailto:admin.saktistore@email.com" class="contact-btn email">
+                    <i class="fas fa-envelope"></i> Email Admin
+                </a>
+                <a href="https://t.me/admin_saktistore" target="_blank" class="contact-btn telegram">
+                    <i class="fab fa-telegram-plane"></i> Telegram Admin
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="page-section hidden">
+            <h2 class="page-title">📜 Tentang Sakti Store</h2>
+            <div class="about-content">
+                <img src="https://i.ibb.co/x7T3W1Y/about-image.jpg" alt="Ilustrasi Sakti Store" class="about-image">
+                <div class="about-text">
+                    <p><strong>Sakti Store</strong> hadir sebagai solusi cepat dan terpercaya untuk kebutuhan topup game dan layanan jasa Mobile Legends Anda. Kami fokus menyediakan BBC (Blind Box Coin) dengan harga termurah dan layanan jasa pembuatan akun Advanced Server yang instan dan anti ribet.</p>
+                    <p>Kepercayaan pelanggan adalah prioritas utama kami. Semua transaksi dijamin aman dan prosesnya secepat kilat. Kami berkomitmen untuk memberikan pengalaman bertransaksi yang premium dan memuaskan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="terms" class="page-section hidden">
+            <h2 class="page-title">⚖️ Syarat & Ketentuan Penggunaan</h2>
+            <div class="terms-content">
+                <img src="https://i.ibb.co/30zF1W8/terms-image.jpg" alt="Ilustrasi Syarat dan Ketentuan" class="terms-image">
+                <div class="terms-text">
+                    <p>Dengan menggunakan layanan <strong>Sakti Store</strong>, Anda menyetujui poin-poin berikut:</p>
+                    <ul>
+                        <li>Pastikan User ID dan Server ID yang dimasukkan **BENAR**. Kesalahan input yang menyebabkan diamond/BBC masuk ke akun lain sepenuhnya tanggung jawab pembeli.</li>
+                        <li>Proses pengerjaan Jasa Akun Advanced Server memakan waktu 1-2 hari, tergantung antrean dan level yang dipilih.</li>
+                        <li>Semua transaksi yang sudah berhasil tidak dapat di-refund (dikembalikan).</li>
+                        <li>Kami berhak mengubah harga dan ketentuan layanan tanpa pemberitahuan sebelumnya.</li>
+                        <li>Bukti transfer yang diunggah harus jelas dan valid. Kami akan membatalkan pesanan jika bukti transfer palsu.</li>
+                    </ul>
+                    <p class="important-note">**Penting:** Layanan ini tunduk pada kebijakan Mobile Legends Bang Bang. Kami tidak bertanggung jawab atas tindakan Moonton terhadap akun Anda.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="product-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('product-detail-modal')">&times;</span>
+            <div id="modal-content-container">
+                </div>
+        </div>
+    </div>
+
+    <div id="payment-modal" class="modal">
+        <div class="modal-content small-modal">
+            <span class="close-btn" onclick="closeModal('payment-modal')">&times;</span>
+            <h3 class="modal-title">💸 Selesaikan Pembayaran</h3>
+            <p class="payment-instruction">Total Pembayaran: <strong id="payment-total-price"></strong></p>
+            <p class="payment-note">Scan QRIS di bawah ini dengan aplikasi bank/ewallet Anda. Setelah transfer, **unggah bukti bayar!**</p>
+            
+            <img id="qris-image" src="https://i.ibb.co/F8K4W5c/qris-dummy.jpg" alt="Kode QRIS Pembayaran" class="qris-image">
+
+            <div class="input-group">
+                <label for="proof-upload">Upload Bukti Transfer (Screenshot)</label>
+                <input type="file" id="proof-upload" accept="image/*" required>
+            </div>
+
+            <button class="confirm-payment-btn" id="confirm-payment-btn">
+                <i class="fab fa-whatsapp"></i> Konfirmasi Pembayaran & Detail Pesanan
+            </button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
