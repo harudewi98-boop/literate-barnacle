@@ -1,0 +1,533 @@
+/* Warna Utama (Dark Theme Premium) */
+:root {
+    --primary-color: #3b2c8c; /* Ungu Gelap Lebih Terang dari Sebelumnya */
+    --secondary-color: #ffd700; /* Kuning Emas Murni */
+    --bg-color: #121212; /* Background Hitam Pekat */
+    --card-bg: #1f1f1f; /* Background Kartu */
+    --text-color: #ffffff;
+    --text-light: #b3b3b3;
+    --border-color: #444444;
+    --shadow-premium: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Reset dan Basic Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+    background-color: var(--card-bg);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 2px var(--primary-color);
+}
+
+/* --- Sidebar & Hamburger Menu --- */
+.openbtn {
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--secondary-color);
+    transition: transform 0.3s;
+}
+.openbtn:hover {
+    transform: scale(1.1);
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    transition: 0.4s;
+    padding-top: 60px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.sidebar a {
+    padding: 15px 25px;
+    font-size: 1rem;
+    color: var(--text-color);
+    border-bottom: 1px solid #333;
+}
+
+.sidebar a:hover {
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 40px;
+    color: var(--text-light);
+}
+
+.sidebar-title {
+    color: var(--secondary-color);
+    padding: 0 25px 10px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+/* --- Slider Styling --- */
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-premium);
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 25%;
+    height: 350px; 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.slide-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
+    padding: 20px;
+    color: var(--text-color);
+    max-width: 70%;
+}
+
+.slide-text h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.dots-container {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.dot {
+    background-color: var(--text-light);
+}
+
+.dot.active {
+    background-color: var(--secondary-color);
+}
+
+/* --- Category Selection --- */
+.category-selection {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0 20px;
+}
+
+.category-card {
+    background-color: var(--card-bg);
+    padding: 20px 10px;
+    border-radius: 10px;
+    width: 48%;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid var(--border-color);
+    position: relative;
+}
+
+.category-card:hover {
+    transform: scale(1.03);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+}
+
+.category-card.active {
+    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.category-card img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-color);
+}
+
+.category-card h4 {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* --- Badge Populer --- */
+.badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #e74c3c; /* Merah */
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    transform: rotate(5deg);
+}
+
+/* --- Product List --- */
+.section-title {
+    font-size: 2rem;
+    margin: 40px 0 25px;
+    text-align: center;
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+    padding-bottom: 5px;
+    width: auto;
+    margin: 40px auto 25px auto;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-premium);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border 0.3s, transform 0.2s;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.product-card:hover {
+    border: 1px solid var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+.product-info h3 {
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.product-action {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px dashed var(--border-color);
+    padding-top: 15px;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3CB371; /* Hijau untuk harga */
+}
+
+.buy-button {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.buy-button:hover {
+    background-color: #e39d00;
+    transform: scale(1.05);
+}
+
+/* --- Modal (Pop-up) Styling --- */
+.modal-content {
+    background-color: #2a2a2a;
+    margin: 8% auto;
+    padding: 30px;
+    border: 2px solid var(--primary-color);
+    max-width: 550px;
+    border-radius: 15px;
+    box-shadow: var(--shadow-premium);
+}
+
+.modal-content h2 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 5px;
+}
+
+.close-button {
+    color: var(--text-light);
+    float: right;
+    font-size: 32px;
+}
+
+/* Form Styling */
+.modal-content input[type="text"],
+.modal-content input[type="tel"],
+.modal-content input[type="email"],
+.modal-content select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    transition: background-color 0.3s;
+}
+.submit-button:hover {
+    background-color: #4f3a9a;
+}
+
+/* QRIS Modal Specific */
+.qris-image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+#qris-image {
+    max-width: 250px;
+    border: 6px solid var(--secondary-color);
+}
+#bukti-transfer {
+    padding: 10px 0;
+    background: none;
+    border: none;
+}
+.whatsapp-button {
+    background-color: #25d366; 
+    color: white;
+    font-weight: 700;
+}
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+/* Gaya Deskripsi Produk di Modal */
+.product-description {
+    color: #d1d1d1;
+    font-style: italic;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 15px;
+}
+.product-info-meta {
+    font-size: 0.95rem;
+    color: #90ee90;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed var(--border-color);
+}
+.customer-quote {
+    background-color: #1a1a1a;
+    border-left: 5px solid var(--primary-color);
+    padding: 15px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-radius: 5px;
+}
+
+
+/* --- Halaman Tambahan (Page Content) --- */
+.page-content {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.page-title {
+    font-size: 2.2rem;
+}
+
+/* Bantuan Admin Page */
+.contact-card {
+    background-color: #2a2a2a;
+    border: 2px solid var(--border-color);
+    transition: background-color 0.3s;
+    border-radius: 10px;
+}
+.contact-card:hover {
+    background-color: #333;
+}
+.contact-card.whatsapp { border-color: #25d366; }
+.contact-card.email { border-color: #EA4335; }
+.contact-card.telegram { border-color: #0088cc; }
+
+.schedule-card {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+}
+.schedule-card.fast-response { background-color: #1a251a; border-color: #3CB371; }
+.schedule-card.low-response { background-color: #251a1a; border-color: #FF6347; }
+.schedule-card h4 { color: var(--secondary-color); }
+.schedule-card i { margin-right: 8px; }
+
+/* Tentang Website Page */
+.about-content {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-premium);
+}
+.about-image img {
+    border: 5px solid var(--primary-color);
+}
+
+/* Review Page */
+.review-input-section {
+    background-color: #2a2a2a;
+    border: 1px solid var(--primary-color);
+    box-shadow: var(--shadow-premium);
+}
+.review-card {
+    background-color: var(--card-bg);
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.review-card.new::before {
+    background-color: #00bcd4; 
+}
+.whatsapp-channel-button {
+    background-color: #25d366;
+}
+
+/* Syarat & Ketentuan Page */
+.terms-image img {
+    border-radius: 12px;
+}
+.terms-content {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+}
+.terms-content p {
+    border-left: 3px solid var(--secondary-color);
+}
+
+
+/* --- Responsiveness (Tablet dan Mobile) --- */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    .slide {
+        height: 250px;
+    }
+    .slide-text {
+        padding: 15px;
+        max-width: 95%;
+    }
+    .slide-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .category-selection {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .category-card {
+        width: 100%;
+        padding: 15px;
+    }
+    
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-action {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price {
+        margin-bottom: 10px;
+    }
+    .buy-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+    .schedule-grid {
+        flex-direction: column;
+    }
+    .schedule-card {
+        width: 100%;
+    }
+    
+    .modal-content {
+        margin: 15% auto;
+    }
+}
